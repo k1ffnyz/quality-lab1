@@ -10,3 +10,10 @@ export function calculateTotal(items) {
 export function calculateDiscount(total, discountPercent) {
   return total - (total * discountPercent) / 100;
 }
+// Форматирую сумму в выбранной валюте
+export function formatCurrency(amount, currency) {
+  return new Intl.NumberFormat('ru-RU', {
+    style: 'currency',
+    currency: currency,
+  }).format(amount);
+}
